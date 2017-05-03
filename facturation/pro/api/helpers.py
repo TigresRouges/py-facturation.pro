@@ -103,7 +103,7 @@ class Client(object):
         return self._meth_post(details=details, **body)
 
     def post(self, details=None, body=None):
-        return self._post(self.build_url(details), body=body).json()
+        return self._post(details=details, body=body).json()
 
     def _patch(self, details, body):
         args_poss = self.POSSIBLE_ARGS_PATCH
